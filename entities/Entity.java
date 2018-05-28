@@ -26,7 +26,7 @@ public class Entity {
             if (componentType.isInstance(component))
                 return (T) component;
         }
-        throw new IllegalArgumentException("ERROR: " + this + " does not possess Component of type: " + componentType);
+        throw new IllegalArgumentException("ERROR: " + this.name + " does not possess Component of type: " + componentType.getSimpleName());
     }
 
     @SuppressWarnings("unchecked")
